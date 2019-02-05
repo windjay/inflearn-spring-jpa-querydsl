@@ -24,6 +24,7 @@ public class AccountRepositoryTest {
 
   @Test
   public void crud() {
+    // querydsl 의 predicate 를 사용하여 조건을 설정
     Predicate predicate = QAccount.account.firstname.containsIgnoreCase("windjay")
             .and(QAccount.account.lastename.startsWith("Choi"));
 
